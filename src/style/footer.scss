@@ -1,0 +1,22 @@
+.footer-Container{
+    .foo{
+
+        align-items: center;
+        align-content: center;
+        
+        .comb{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .base_Container {
+        position: relative;
+        top: 0;
+        left: 0;
+        max-height: 300px;
+        color: #fff;
+        background: #333;
+      }
+}

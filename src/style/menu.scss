@@ -1,0 +1,215 @@
+$black: #333;
+$white: #fff;
+
+.nav-Container {
+  .search {
+    position: relative;
+    top: 12px;
+  }
+
+  .log {
+    cursor: pointer;
+  }
+
+  .burgerBag {
+    display: flex;
+    justify-content: space-between;
+    background: $white;
+    padding: 10px 0;
+
+    .burger {
+      position: relative;
+      display: flex;
+      width: 1rem;
+      height: 1.5rem;
+      z-index: 3;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.5s ease-out;
+      left: 15px;
+      top: 7px;
+      cursor: pointer;
+
+      .slice {
+        z-index: 3;
+        background: $black;
+        width: 25px;
+        border-radius: 1px;
+        transition: all 0.5s ease-out;
+        margin-bottom: 5px;
+        height: 3px;
+      }
+
+      // Rotate Into X wWith Menu Lines
+      &.rota {
+        transform: rotate(180deg);
+        left: 310px;
+        top: -70px;
+        cursor: pointer;
+
+        .slice {
+          background: $white;
+
+          // Line 1 - Rotate
+          &:nth-child(1) {
+            transform: rotate(45deg) translate(1px, 16px);
+          }
+
+          // Line 2 - Hide
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          // Line 3 - Rotate
+          &:nth-child(3) {
+            transform: rotate(-45deg) translate(-4px, -11px);
+          }
+        }
+      }
+    }
+
+    // Menu Overlay
+
+    .menu-Container {
+      visibility: hidden;
+
+      &.show {
+        visibility: visible;
+      }
+
+      .menu {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        height: 100%;
+        // overflow: hidden;
+        transform: translate3d(-100%, 0, 0);
+        transition: all 0.5s ease-out;
+
+        .welcome {
+          background: #444;
+          width: 300px;
+          color: $white;
+          padding: 10px 20px;
+        }
+
+        .nav-cat {
+          background: $white;
+          width: 300px;
+          height: 100vh;
+          padding: 20px;
+          position: relative;
+          top: -10px;
+          padding-top: 10px;
+
+          h4 {
+            border-bottom: solid $black 1px;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+          }
+
+          ul {
+            list-style: none;
+
+            li {
+              margin-bottom: 20px;
+              color: $black;
+            }
+          }
+        }
+        &.show {
+          visibility: visible;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      .bg {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.9;
+        background: $black;
+      }
+    }
+
+    // bag
+    .bag-Container {
+      .bag {
+        position: relative;
+        transition: all 0.5s ease-out;
+        z-index: 3;
+        right: 15px;
+        top: 0;
+        cursor: pointer;
+        &.checker {
+          top: -60px;
+          right: 440px;
+        }
+        .barg {
+          span {
+            position: relative;
+            top: -20px;
+            right: 5px;
+            font-weight: bolder;
+          }
+        }
+      }
+      .rightNav-Container {
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        border: $black solid 3px;
+
+        &.checker {
+          visibility: visible;
+        }
+
+        .rightNav {
+          position: relative;
+          background: $white;
+          height: 100%;
+          width: 500px;
+          right: -860px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.5s ease-out;
+          z-index: 3;
+          transform: translate3d(100%, 0, 0);
+          &.checker {
+            visibility: visible;
+            transform: translate3d(0, 0, 0);
+          }
+        }
+
+        .bag-Header {
+          position: relative;
+          right: -170px;
+          top: -160px;
+          color: $black;
+          padding: 10px 20px;
+        }
+        img {
+          height: 100px;
+          object-fit: contain;
+          margin: 40px;
+        }
+        .bg {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0.9;
+          background: $black;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.products-Container{
+    background: rgb(238, 234, 234);
+    // width: 100vw;
+    // left: 0;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3 1fr);
+    // align-items: center;
+    // justify-items: center;
+    grid-template-areas: 'product product product';
+    gap: 40px 200px;
+    padding: 20px 0 ;
+    
+    .product{
+        place-self: center;
+        background: white;
+        cursor: pointer;
+        img{
+            height: 300px;
+        }
+
+    }
+}
