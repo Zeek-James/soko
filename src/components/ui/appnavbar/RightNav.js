@@ -1,8 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import sad from "../../../images/sad day.png";
 
 export const RightNav = ({ bag, toggle }) => {
-  return (
+  const cart = useSelector(state => state.cart)    
+  
+  return cart ? (
     <div className={!bag ? "rightNav-Container" : "rightNav-Container checker"}>
       <div className={!bag ? "rightNav" : "rightNav checker"}>
         <div className="bag-Header">
@@ -16,5 +19,5 @@ export const RightNav = ({ bag, toggle }) => {
       </div>
       <div className="bg" onClick={toggle}></div>
     </div>
-  );
+  ) : ('Hello');
 };

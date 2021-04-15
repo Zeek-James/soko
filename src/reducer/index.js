@@ -1,9 +1,11 @@
 import soko from "./soko";
+import cart from "./cartItems";
 
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
-    soko
+    soko,
+    cart
 });
 
 export default allReducers;

@@ -8,12 +8,12 @@ import home from "../images/pexels-emre-can-2079249.jpg";
 
 
 const initialState = [
-  { id: 1, pic: kids, title: 'Kids' },
-  { id: 2, pic: faceMask, title: 'Face Mask' },
-  { id: 3, pic: beat, title: 'Electronics' },
-  { id: 4, pic: grocery, title: 'Grocery' },
-  { id: 5, pic: freshFood, title: 'Fresh Food' },
-  { id: 6, pic: home, title: 'Home' }
+  { id: 1, pic: kids, title: 'Kids', price: 10000 },
+  { id: 2, pic: faceMask, title: 'Face Mask', price: 700},
+  { id: 3, pic: beat, title: 'Electronics', price: 140000},
+  { id: 4, pic: grocery, title: 'Grocery', price: 15000},
+  { id: 5, pic: freshFood, title: 'Fresh Food', price: 7000},
+  { id: 6, pic: home, title: 'Home',  price: 250000 }
   
 ]
 

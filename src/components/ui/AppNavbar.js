@@ -12,9 +12,9 @@ export const AppNavbar = () => {
 
   const toggle = () => setIsOpen(!isOpen);
   const authorisedLink = (
-    <Fragment onClick={toggle}>
+    <Fragment>
       <Nav navbar>
-        <NavItem>
+        <NavItem onClick={toggle}>
           <p>
             <Avatar
               gender="male"
@@ -24,7 +24,7 @@ export const AppNavbar = () => {
               alt="Avatar"
             />
             <span className="ml-4">
-              Log out <FontAwesomeIcon classname="m-2" icon="sign-out-alt" />
+              Log out <FontAwesomeIcon className="m-2" icon="sign-out-alt" />
             </span>
           </p>
         </NavItem>
@@ -33,15 +33,15 @@ export const AppNavbar = () => {
   );
 
   const guestlink = (
-    <Fragment onClick={toggle}>
+    <Fragment>
       <Nav navbar>
-        <NavItem>
-          <p>
+        <NavItem onClick={toggle}>
+          <div>
             <span className="mr-4">
-              Login <FontAwesomeIcon classname="m-2" icon="sign-in-alt" />
+              Login <FontAwesomeIcon className="" icon="sign-in-alt" />
             </span>
-            <FontAwesomeIcon classname="m-2" icon="user-plus" />
-          </p>
+            <FontAwesomeIcon className="" icon="user-plus" />
+          </div>
         </NavItem>
       </Nav>
     </Fragment>
