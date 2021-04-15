@@ -12,7 +12,7 @@ export const AppNavbar = () => {
 
   const toggle = () => setIsOpen(!isOpen);
   const authorisedLink = (
-    <Fragment>
+    <Fragment onClick={toggle}>
       <Nav navbar>
         <NavItem>
           <p>
@@ -33,7 +33,7 @@ export const AppNavbar = () => {
   );
 
   const guestlink = (
-    <Fragment>
+    <Fragment onClick={toggle}>
       <Nav navbar>
         <NavItem>
           <p>
@@ -56,9 +56,11 @@ export const AppNavbar = () => {
         className="d-flex justify-content-between"
       >
         <NavbarBrand href="/">
-          <h1>S<FontAwesomeIcon icon="shopping-bag"  className="fa-ms" />ko</h1>
-    <span></span>
-
+          <h1>
+            S<FontAwesomeIcon icon="shopping-bag" className="fa-ms" />
+            ko
+          </h1>
+          <span></span>
         </NavbarBrand>
         <Nav className="w-75" navbar>
           <NavItem className="w-75 mr-2">
@@ -68,17 +70,14 @@ export const AppNavbar = () => {
               placeholder="Search"
             />
           </NavItem>
-          <FontAwesomeIcon icon="search" className='search' />
+          <FontAwesomeIcon icon="search" className="search" />
         </Nav>
-        <div className='log'>
-
-        {!isOpen ? guestlink : authorisedLink}
-        </div>
+        <div className="log">{!isOpen ? guestlink : authorisedLink}</div>
       </Navbar>
-      <div className='burgerBag shadow'>
+      <div className="burgerBag shadow">
         <Burger />
         <Bag />
-    </div>
+      </div>
     </div>
   );
 };
